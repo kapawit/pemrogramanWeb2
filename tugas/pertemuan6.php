@@ -1,7 +1,7 @@
 <?php
-if (!isset($_SESSION['myArray'])) {
-    $_SESSION['myArray'] = array();
-  }
+    if (!isset($_SESSION['myArray'])) {
+        $_SESSION['myArray'] = array();
+    }
   
   if (isset($_POST['save-array'])) {
     $inputArray = explode(',', $_POST['input-array']);
@@ -16,8 +16,20 @@ if (!isset($_SESSION['myArray'])) {
     $del = $_POST['del-index'];
     unset($_SESSION['myArray'][$del]);
   }
-?>
-
+    // Tugas 2
+    $cars = array (
+        array("Ford","http://ford.co.id/wp-content/uploads/2022/05/wildtrack_saber.png"),
+        array("BMW","https://www.bmw.co.id/content/bmw/marketID/bmw_co_id/en_ID/all-models/bmw-i/i4/2021/bmw-i4-highlights/jcr:content/par/multicontent_1331453561/tabs/multicontenttab_83f7/items/smallteaser_6f9b/image.transform/smallteaser/image.1648702943662.jpg"),
+        array("Toyota","https://www.toyota.astra.co.id/sites/default/files/2023-02/corolla-cross-hybrid-gr_0.png"),
+    );
+    if (!isset($_SESSION['cars'])) {
+        $_SESSION['cars'] = $cars;
+    }
+    if (isset($_POST['add-car'])) {
+        $newcar = array($_POST['merk-car'], $_POST['foto-car']);
+        array_push($_SESSION['cars'], $newcar);
+     }
+    ?>
     <div class="my-4"> 
         <h4>Tugas 1 - Program Array</h4>
         <hr>
@@ -35,7 +47,7 @@ if (!isset($_SESSION['myArray'])) {
         <div class="d-flex justify-content-between">
         <form action="" method="post">
                 <label for="input-array">Masukkan data :</label><br>
-                <input type="text" id="input-array" name="input-array" placeholder="Tesla,Toyota,Ford,Esemka" required>
+                <input type="text" id="input-array" name="input-array" placeholder="Ford,Esemka" required>
                 <button class="btn btn-sm btn-primary btn-block" type="submit" name="save-array">Simpan</button>
         </form>
     
@@ -55,7 +67,39 @@ if (!isset($_SESSION['myArray'])) {
 </div>
 <div class="my-4">
     <h4>Tugas 2 - Program Array 2 Dimensi</h4>
-    <div>
-        
+    <hr>
+    <div>  
+    <div class="alert alert-info">
+    <?php 
+    echo "<pre>";
+    print_r($_SESSION['cars']);
+    echo "</pre>";
+    ?>
+    </div>
+
+    <?php
+       
+    ?>
+    <div class="row">
+        <?php for ($row = 0; $row < 4; $row++) { ?>
+            <div class="col-3">
+                <div class="card">
+                    <div class="card-body text-center">
+                            <img class="w-100 h-100" src="<?=  $_SESSION['cars'][$row][1]?>" alt="<?=  $_SESSION['cars'][$row][0]?>">
+                            <span><?= $_SESSION['cars'][$row][0]?></span>
+                        </div>
+                    </div>
+                </div>
+        <?php }?>
+    </div>
+    <div class="mt-4">
+        <h4>Tambah Mobil</h4>
+        <form action="" method="post">
+            <label for="new-item">Merk Mobil:</label><br>
+            <input class="w-100" type="text" name="merk-car" placeholder="Merk" required>
+            <label for="new-item">Foto Mobil:</label><br>
+            <input class="w-100" type="text" name="foto-car" placeholder="Url Foto" required>
+            <button class="btn mt-4 btn-sm btn-success btn-block" type="submit" name="add-car">Tambah</button>
+        </form>
     </div>
 </div>
