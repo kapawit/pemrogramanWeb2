@@ -1,0 +1,33 @@
+/* #toggleSwitch {
+    transform: scale(1.8);
+  } */
+  
+  .custom-theme.bg-light {
+    background-color: darkslategray !important;
+    border-radius: 3px;
+    color: gainsboro;
+    text-decoration: underline;
+  }
+  
+  .custom-theme.bg-dark {
+    background-color: blanchedalmond !important;
+    box-shadow: 10px 5px 5px rgba(246, 255, 219, 0.5);
+    color: dimgray;
+    text-decoration: overline;
+  }
+
+  /* #my-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  }
+  
+  #my-card.show {
+    opacity: 1;
+    transform: none;
+  } */
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
