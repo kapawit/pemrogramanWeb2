@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $dir = "tugas/";
     $files = scandir($dir);
 ?>
@@ -35,30 +36,42 @@
 </nav>
   <div class="row g-0 mt-4">
     <div class="col-md-3 col-sm-12 h-100">
-      <div class="card mx-4 p-4 border bg-light-subtle">
-        <h5>Daftar Tugas </h5>
-        <h6>Pemrograman Web 2</h6>
-        <div class="list-group">
-          <?php foreach($files as $file) {
-              if(substr($file, -4) === ".php") {?>
-                <?php 
-                  if (isset($_GET['page'])) {
-                    $page = filter_var($_GET['page'], FILTER_SANITIZE_STRING);
-                  }
-                ?>
-                  <a class="list-group-item list-group-item-action <?php if ($page == $file) {
-                    echo "active";
-                  } ?>" href="<?php echo '?page=' . $file; ?>"><?php echo $file; ?></a>
-                  <?php } ?>
-              <?php } ?>
-            </div>
-            <div class="text-center mt-4">
-              fork this project on my <a href="https://github.com/kapawit/pemrogramanWeb2.git">Github</a>
-            </div>
+      <div class="card mx-4 border bg-light-subtle">
+        <div class="card-header px-4">
+          <h5>Daftar Tugas </h5>
+          <h6>Pemrograman Web 2</h6>
+        </div>
+        <div class="card-body px-4">
+          <div class="list-group">
+            <?php foreach($files as $file) {
+                if(substr($file, -4) === ".php") {?>
+                  <?php 
+                    if (isset($_GET['page'])) {
+                      $page = filter_var($_GET['page'], FILTER_SANITIZE_STRING);
+                    }
+                  ?>
+                    <a class="list-group-item list-group-item-action <?php if ($page == $file) {
+                      echo "active";
+                    } ?>" href="<?php echo '?page=' . $file; ?>"><?php echo $file; ?></a>
+                    <?php } ?>
+                <?php } ?>
+              </div>
+              <div class="text-center mt-4">
+                fork this project on my <a href="https://github.com/kapawit/pemrogramanWeb2.git">Github</a>
+              </div>
           </div>
+        </div>
     </div>
     <div class="col-md-9 col-sm-12  vh-80">
       <div class="card mx-4 bg-light-subtle" id="my-card">
+        <div class="card-header p-4">
+          <?php 
+            if (isset($_GET['page'])) {
+              $page = filter_var($_GET['page'], FILTER_SANITIZE_STRING);
+              echo "<h5>{$page}</h5>";
+            }
+          ?>
+        </div>
         <div class="card-body p-4">
         <ul class="nav nav-tabs bg-body" id="myTab" role="tablist">
           <li class="nav-item" role="presentation">
