@@ -87,9 +87,8 @@
             <?php 
                 if (isset($_GET['page'])) {
                   $page = filter_var($_GET['page'], FILTER_SANITIZE_STRING);
-                  $filename = $page;
-                  if (file_exists('tugas/'.$filename)) {
-                    include('tugas/'.$filename);
+                  if (file_exists('tugas/'.$page)) {
+                    include('tugas/'.$page);
                   } else {
                     header("HTTP/1.0 404 Not Found");
                     echo "Page not found.";
@@ -97,7 +96,6 @@
                 } else {
                   include('default.php');
                 }
-              
               ?>
           </div>
           </div>
@@ -107,19 +105,17 @@
         <div class="card">
           <div class="card-body">
             <?php 
-                  if (isset($_GET['page'])) {
-                    $page = filter_var($_GET['page'], FILTER_SANITIZE_STRING);
-                    $filename = $page;
-                    if (file_exists('tugas/'.$filename)) {
-                      highlight_file('tugas/'.$filename);
-                    } else {
-                      header("HTTP/1.0 404 Not Found");
-                      echo "Page not found.";
-                    }
+                if (isset($_GET['page'])) {
+                  $page = filter_var($_GET['page'], FILTER_SANITIZE_STRING);
+                  if (file_exists('tugas/'. $page)) {
+                      highlight_file('tugas/'. $page);
                   } else {
-                    include('default.php');
+                    header("HTTP/1.0 404 Not Found");
+                    echo "Page not found.";
                   }
-                
+                } else {
+                  include('default.php');
+                }
                 ?>
             </div>
           </div>
