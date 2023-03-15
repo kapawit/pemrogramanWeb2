@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    press one of the tasks on the left to see the results
+   Klik salah satu tugas pada sidebar untuk melihat hasil dan preview kode
 </body>
 </html>
