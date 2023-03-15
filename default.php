@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    test
+    press one of the tasks on the left to see the results
 </body>
 </html>

@@ -53,7 +53,7 @@
               <?php } ?>
             </div>
             <div class="text-center mt-4">
-              fork this project on my <a href="https://github.com/kapawit/pemrograman2.git">github</a>
+              fork this project on my <a href="https://github.com/kapawit/pemrogramanWeb2.git">Github</a>
             </div>
           </div>
     </div>
