@@ -6,18 +6,15 @@ if (!isset($_SESSION['myArray'])) {
   if (isset($_POST['save-array'])) {
     $inputArray = explode(',', $_POST['input-array']);
     $_SESSION['myArray'] = $inputArray;
-    echo "Array saved !";
   }
   
   if (isset($_POST['add-item'])) {
     $newItem = $_POST['new-item'];
     array_push($_SESSION['myArray'], $newItem);
-    echo "Item added to array and updated!";
   }
   if (isset($_POST['del-item'])) {
     $del = $_POST['del-index'];
     unset($_SESSION['myArray'][$del]);
-    echo "Item removed from array and updated!";
   }
 ?>
 <!DOCTYPE html>
