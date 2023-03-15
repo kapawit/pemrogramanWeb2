@@ -18,7 +18,7 @@ if (!isset($_SESSION['myArray'])) {
   }
 ?>
 
-    <div> 
+    <div class="my-4"> 
         <h4>Tugas 1 - Program Array</h4>
         <hr>
         <div class="alert alert-info">
@@ -32,23 +32,27 @@ if (!isset($_SESSION['myArray'])) {
             }
             ?>
         </div>
-    <form action="" method="post">
-        <label for="input-array">Masukkan data :</label><br>
-        <input type="text" id="input-array" name="input-array" placeholder="A,B,C,D" required>
-        <button type="submit" name="save-array">Simpan Array</button>
-        <br>
-    </form>
+        <div class="d-flex justify-content-between">
+        <form action="" method="post">
+                <label for="input-array">Masukkan data :</label><br>
+                <input type="text" id="input-array" name="input-array" placeholder="A,B,C,D" required>
+                <button class="btn btn-sm btn-primary btn-block" type="submit" name="save-array">Simpan</button>
+        </form>
     
-    <form action="" method="post">
-        <label for="new-item">Tambahkan Data:</label><br>
-        <input type="text" id="new-item" name="new-item" required>
-        <button type="submit" name="add-item">Tambah Data</button>
-    </form>
+        <form action="" method="post">
+            <label for="new-item">Tambahkan Data:</label><br>
+            <input type="text" id="new-item" name="new-item" required>
+            <button class="btn btn-sm btn-success btn-block" type="submit" name="add-item">Tambah</button>
+        </form>
 
-    <form action="" method="post">
-        <label for="new-item">hapus Data:</label><br>
-        <input type="text" id="del-index" name="del-index" required>
-        <button type="submit" name="del-item">Hapus Data</button>
-    </form>
-    
-    </div>
+        <form action="" method="post">
+            <label for="new-item">hapus Data:</label><br>
+            <input type="text" id="del-index" name="del-index" required>
+            <button class="btn btn-sm btn-danger btn-block" type="submit" name="del-item">Hapus</button>
+        </form>
+        </div>
+    <hr>
+</div>
+<div class="my-4">
+    <h4>Tugas 2 - Program Array 2 Dimensi</h4>
+</div>
