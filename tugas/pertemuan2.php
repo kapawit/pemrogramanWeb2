@@ -32,16 +32,6 @@ function rupiah($angka){
 }
 
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menghitung Diskon</title>
-</head>
-<body>
     <center>
         <font face="comic sans serif" size=5 color="blue">
             Contoh Perhitungan dengan PHP
@@ -93,7 +83,3 @@ function rupiah($angka){
             </tbody>
         </table>
     </center>
-
-    
-</body>
-</html>

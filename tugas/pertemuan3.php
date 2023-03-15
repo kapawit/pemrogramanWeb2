@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Hitung Nilai Akhir</title>
-</head>
-<body>
-
 	<div class="container mt-5">
 		<h1 class="mb-4">Hitung Nilai Akhir</h1>
 
@@ -122,5 +115,3 @@ if(isset($_POST['submit'])){
 
 
 	</div>
-</body>
-</html>

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" integrity="sha512-csw0Ma4oXCAgd/d4nTcpoEoz4nYvvnk21a8VA2h2dzhPAvjbUIK6V3si7/g/HehwdunqqW18RwCJKpD7rL67Xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="asset/custom.css" />
   </head>
   <body class="bg-dark-subtle">
@@ -34,14 +35,14 @@
     </div>
   </div>
 </nav>
-  <div class="row g-0 mt-4">
-    <div class="col-md-3 col-sm-12 h-100">
+  <div class="row g-0 mt-2">
+    <div class="col-md-3 pt-4 col-sm-12 h-100">
       <div class="card mx-4 border bg-light-subtle">
         <div class="card-header px-4">
           <h5>Daftar Tugas </h5>
           <h6>Pemrograman Web 2</h6>
         </div>
-        <div class="card-body px-4">
+        <div class="card-body p-4">
           <div class="list-group">
             <?php foreach($files as $file) {
                 if(substr($file, -4) === ".php") {?>
@@ -50,9 +51,15 @@
                       $page = filter_var($_GET['page'], FILTER_SANITIZE_STRING);
                     }
                   ?>
-                    <a class="list-group-item list-group-item-action <?php if ($page == $file) {
+                    <a class="list-group-item hvr-forward list-group-item-action <?php if ($page == $file) {
                       echo "active";
-                    } ?>" href="<?php echo '?page=' . $file; ?>"><?php echo $file; ?></a>
+                    } ?>" href="<?php echo '?page=' . $file; ?>">
+                    <span class="d-flex justify-content-between">
+                      <?php echo $file; ?>
+                      <i class="bi bi-arrow-right"></i>
+                    </span>
+
+                  </a>
                     <?php } ?>
                 <?php } ?>
               </div>
@@ -62,27 +69,19 @@
           </div>
         </div>
     </div>
-    <div class="col-md-9 col-sm-12  vh-80">
-      <div class="card mx-4 bg-light-subtle" id="my-card">
-        <div class="card-header p-4">
-          <?php 
-            if (isset($_GET['page'])) {
-              $page = filter_var($_GET['page'], FILTER_SANITIZE_STRING);
-              echo "<h5>{$page}</h5>";
-            }
-          ?>
-        </div>
+    <div class="col-md-9 pt-4 col-sm-12 vh-80">
+      <div class="card me-4 bg-light-subtle" id="my-card">
         <div class="card-body p-4">
         <ul class="nav nav-tabs bg-body" id="myTab" role="tablist">
           <li class="nav-item" role="presentation">
             <button class="nav-link active" id="preview-tab" data-bs-toggle="tab" data-bs-target="#preview-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Preview</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="code-tab" data-bs-toggle="tab" data-bs-target="#code-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Code</button>
+            <button class="nav-link" id="code-tab" data-bs-toggle="tab" data-bs-target="#code-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Source Code</button>
           </li>
         </ul>
-        <div class="tab-content mt-2" id="myTabContent">
-        <div style="height:600px;min-height:100%;" class="tab-pane fade show overflow-y-scroll overflow-x-scroll active" id="preview-tab-pane" role="tabpanel" aria-labelledby="preview-tab" tabindex="0">
+        <div class="tab-content mt-4" id="myTabContent">
+        <div style="height:500px;min-height:100%;" class="tab-pane fade show overflow-y-scroll overflow-x-scroll active" id="preview-tab-pane" role="tabpanel" aria-labelledby="preview-tab" tabindex="0">
           <div class="card">
           <div class="card-body">
             <?php 
@@ -104,7 +103,7 @@
           </div>
           
         </div>
-        <div style="height:600px" class="tab-pane fade overflow-y-scroll overflow-x-scroll" id="code-tab-pane" role="tabpanel" aria-labelledby="code-tab" tabindex="0">
+        <div style="height:500px" class="tab-pane fade overflow-y-scroll overflow-x-scroll" id="code-tab-pane" role="tabpanel" aria-labelledby="code-tab" tabindex="0">
         <div class="card">
           <div class="card-body">
             <?php 

@@ -17,15 +17,7 @@ if (!isset($_SESSION['myArray'])) {
     unset($_SESSION['myArray'][$del]);
   }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array</title>
-</head>
-<body>
+
     <div> 
         <h4>Tugas 1 - Program Array</h4>
         <hr>
@@ -52,11 +44,11 @@ if (!isset($_SESSION['myArray'])) {
         <input type="text" id="new-item" name="new-item" required>
         <button type="submit" name="add-item">Tambah Data</button>
     </form>
+
     <form action="" method="post">
         <label for="new-item">hapus Data:</label><br>
         <input type="text" id="del-index" name="del-index" required>
         <button type="submit" name="del-item">Hapus Data</button>
     </form>
+    
     </div>
-</body>
-</html>
