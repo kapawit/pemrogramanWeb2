@@ -19,7 +19,6 @@
     // Tugas 2
     $cars = array (
         array("Ford","http://ford.co.id/wp-content/uploads/2022/05/wildtrack_saber.png"),
-        array("BMW","https://www.bmw.co.id/content/bmw/marketID/bmw_co_id/en_ID/all-models/bmw-i/i4/2021/bmw-i4-highlights/jcr:content/par/multicontent_1331453561/tabs/multicontenttab_83f7/items/smallteaser_6f9b/image.transform/smallteaser/image.1648702943662.jpg"),
         array("Toyota","https://www.toyota.astra.co.id/sites/default/files/2023-02/corolla-cross-hybrid-gr_0.png"),
     );
     if (!isset($_SESSION['cars'])) {
@@ -81,7 +80,7 @@
        
     ?>
     <div class="row">
-        <?php for ($row = 0; $row < 4; $row++) { ?>
+        <?php for ($row = 0; $row < count($_SESSION['cars']); $row++) { ?>
             <div class="col-3">
                 <div class="card">
                     <div class="card-body text-center">
