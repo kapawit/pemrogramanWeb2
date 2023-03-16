@@ -39,19 +39,23 @@
         }
         ?>
     </div>
-    <div class="d-flex justify-content-between">
-    
-        <form action="" method="post">
+    <!-- <div class="d-flex justify-content-between"> -->
+    <div class="row">
+    <div class="col-md-6 col-sm-12">
+        <form class="w-100" action="" method="post">
             <label for="new-item">Tambahkan Data:</label><br>
-            <input type="text" id="new-item" name="new-item" placeholder="volvo" required>
-            <button class="btn btn-sm btn-success btn-block" type="submit" name="add-item">Tambah</button>
+            <input type="text" class="form-control" id="new-item" name="new-item" placeholder="volvo" required>
+            <button class="btn mt-2 btn-sm btn-success btn-block" type="submit" name="add-item">Tambah</button>
         </form>
-
-        <form action="" method="post">
+    </div>
+        <div class="col-md-6 col-sm-12">
+        <form class="w-100" action="" method="post">
             <label for="new-item">hapus Data:</label><br>
-            <input type="text" id="del-index" placeholder="0" name="del-index" required>
-            <button class="btn btn-sm btn-danger btn-block" type="submit" name="del-item">Hapus</button>
+            <input type="text" class="form-control" id="del-index" placeholder="0" name="del-index" required>
+            <button class="btn mt-2 btn-sm btn-danger btn-block" type="submit" name="del-item">Hapus</button>
         </form>
+    </div>
+    <!-- </div> -->
     </div>
 </div>
     <hr>
@@ -81,9 +85,9 @@
         <h4>Tambah Mobil</h4>
         <form action="" method="post">
             <label for="new-item">Merk Mobil:</label><br>
-            <input class="w-100" type="text" name="merk-car" placeholder="Merk" required>
+            <input class="form-control" type="text" name="merk-car" placeholder="Merk" required>
             <label for="new-item">Foto Mobil:</label><br>
-            <input class="w-100" type="text" name="foto-car" placeholder="Url Foto" required>
+            <input class="form-control" type="text" name="foto-car" placeholder="Url Foto" required>
             <button class="btn mt-4 btn-sm btn-success btn-block" type="submit" name="add-car">Tambah</button>
         </form>
     </div>
