@@ -94,7 +94,7 @@
                     echo "Page not found.";
                   }
                 } else {
-                  include('default.php');
+                  echo "Klik salah satu tugas pada sidebar untuk melihat hasil dan preview kode";
                 }
               ?>
           </div>
@@ -114,7 +114,7 @@
                     echo "Page not found.";
                   }
                 } else {
-                  include('default.php');
+                  echo "Klik salah satu tugas pada sidebar untuk melihat hasil dan preview kode";
                 }
                 ?>
             </div>
