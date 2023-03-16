@@ -71,7 +71,7 @@
     </div>
     <div class="row">
         <?php for ($row = 0; $row < count($_SESSION['cars']); $row++) { ?>
-            <div class="col-3">
+            <div class="col-md-3 col-sm-12">
                 <div class="card">
                     <div class="card-body text-center">
                             <img class="w-100 h-100" src="<?=  $_SESSION['cars'][$row][1]?>" alt="<?=  $_SESSION['cars'][$row][0]?>">
