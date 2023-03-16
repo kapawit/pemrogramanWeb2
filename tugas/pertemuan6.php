@@ -1,13 +1,9 @@
 <?php
+    $arr = array("Ford", "Toyota", "Esemka","Wuling");
     if (!isset($_SESSION['myArray'])) {
-        $_SESSION['myArray'] = array();
+        $_SESSION['myArray'] = $arr;
     }
     
-    if (isset($_POST['save-array'])) {
-        $inputArray = explode(',', $_POST['input-array']);
-        $_SESSION['myArray'] = $inputArray;
-    }
-
     if (isset($_POST['add-item'])) {
         $newItem = $_POST['new-item'];
         array_push($_SESSION['myArray'], $newItem);
@@ -44,11 +40,6 @@
         ?>
     </div>
     <div class="d-flex justify-content-between">
-        <form action="" method="post">
-                <label for="input-array">Masukkan data :</label><br>
-                <input type="text" id="input-array" name="input-array" placeholder="Ford,Esemka" required>
-                <button class="btn btn-sm btn-primary btn-block" type="submit" name="save-array">Simpan</button>
-        </form>
     
         <form action="" method="post">
             <label for="new-item">Tambahkan Data:</label><br>
