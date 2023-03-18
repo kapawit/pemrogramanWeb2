@@ -2,7 +2,6 @@
     session_start();
     $dir = "tugas/";
     $files = scandir($dir);
-    include('function.php');
 ?>
 <!doctype html>
 <html lang="en" data-bs-theme="dark">

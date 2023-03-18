@@ -26,7 +26,7 @@
     }
 ?>
 <div class="my-4" id="Tugas1"> 
-    <?= judul("Tugas 1 - Program Array")?>
+    <h4>Tugas 1 - Program Array</h4>
     <hr>
     <div class="alert alert-info">
         <?php 
@@ -60,7 +60,7 @@
 </div>
     <hr>
 <div class="my-4" id="Tugas2">
-   <?= judul("Tugas 2 - Program Array 2 Dimensi");?>
+   <h4>Tugas 2 - Program Array 2 Dimensi</h4>
     <hr>
     <div class="alert alert-info">
         <?php 
