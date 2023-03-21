@@ -39,19 +39,16 @@
 <hr>
 <?php
 $counter="tugas/tmp/counter.dat";
-if(file_exists($counter)){
-    $berkas1 = fopen($counter, "r");
-    $pencacah1 = (integer)trim(fgets($berkas1,255));
-    $pencacah1++;
-    fclose($berkas1);
+if(file_exists($counter)) {
+    $count = intval(file_get_contents($counter));
+    $count++;
+    file_put_contents($counter, strval($count));
 } else {
-    $pencacah1 = 1; 
-    $berkas1 = fopen($counter, "w");
-    fputs($berkas1, $pencacah1);
-    fclose($berkas1);
+    $count = 1;
+    file_put_contents($counter, strval($count));
 }
 
-echo "Anda Pengunjung ke {$pencacah1} <br>";
+echo "Anda Pengunjung ke {$count} <br>";
 ?>
 <hr>
 <h4>Latihan Soal - Buatlah form buku tamu menggunakan fopen() dan simpan di txt file</h4>
