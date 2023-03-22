@@ -5,6 +5,9 @@
     }
     ?>
     <h4>latihan 1</h4>
+    <p>input</p>
+    <p>basic1("Hello World")</p>
+    <hr>
     <p>Output</p>
     <div class="alert alert-info">
         <?php basic1("Hello World");?>
