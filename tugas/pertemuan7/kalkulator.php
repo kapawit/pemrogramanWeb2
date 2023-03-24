@@ -1,19 +1,3 @@
-<div class="card p-4" id="latihan1">
-    <?php 
-    function basic1($argumen1){
-        echo $argumen1;
-    }
-    ?>
-    <h4>latihan 1</h4>
-    <p>input</p>
-    <p>basic1("Hello World")</p>
-    <hr>
-    <p>Output</p>
-    <div class="alert alert-info">
-        <?php basic1("Hello World");?>
-    </div>
-</div>
-<hr>
 <div class="card p-4" id="latihan2">
     <?php 
     if(isset($_POST['a1']) && isset($_POST['b1'])){
@@ -77,34 +61,4 @@
             <p><?php printf("Pembagian Antara : %d / %d = %d", $a1, $b1, $bagibil)?></p>
         <?php }?>
     </div>
-</div>
-<hr>
-<div class="card p-4" id="latihan3">
-    <h4>latihan 3</h4>
-    <p>Input</p>
-    <p> repeat("Im the Best", 12);
-        repeat("Im the Best");</p>
-    <?php 
-    function repeat($text, $num = 10){
-        echo "<ol>\r\n";
-        for ($i=0; $i < $num; $i++) { 
-           echo "<li>{$text}</li>\r\n";
-        }
-        echo "</ol>";
-    }
-    ?>
-    <hr>
-    <p>Output</p>
-    <div class="alert alert-info">
-        <?php
-        // function repear dipanggil menggunakan 2 argumen 
-        repeat("Im the Best", 12);
-        repeat("Im the Best");
-        ?>
-    </div>
-</div>
-<hr>
-<div class="card p-4" id="latihansoal">
-    <h4>latihan Soal</h4>
-<a class="btn btn-block btn-primary" href="tugas/pertemuan7/latihansoal.php">Latihan Soal Pertemuan 7</a>
 </div>

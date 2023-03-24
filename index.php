@@ -45,8 +45,7 @@
         <div class="card-body p-4">
           <div class="list-group">
             <?php foreach($files as $file) {
-                if(substr($file, -4) === ".php") {?>
-                  <?php 
+                if(substr($file, -4) === ".php") {
                     if (isset($_GET['page'])) {
                       $page = filter_var($_GET['page'], FILTER_SANITIZE_STRING);
                     }
@@ -54,12 +53,11 @@
                     <a class="list-group-item hvr-forward list-group-item-action <?php if ($page == $file) {
                       echo "active";
                     } ?>" href="<?php echo '?page=' . $file; ?>">
-                    <span class="d-flex justify-content-between">
-                      <?php echo $file; ?>
-                      <i class="bi bi-arrow-right"></i>
-                    </span>
-
-                  </a>
+                      <span class="d-flex justify-content-between">
+                        <?php echo $file; ?>
+                        <i class="bi bi-arrow-right"></i>
+                      </span>
+                    </a>
                     <?php } ?>
                 <?php } ?>
               </div>
