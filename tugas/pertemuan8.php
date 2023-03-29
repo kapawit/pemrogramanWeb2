@@ -55,7 +55,7 @@
 	</script>
 
 <div class="card p-4">
-    <h4>latihan 1 - Manipulasi String</h4>
+    <h4>latihan Fungsi Manipulasi String</h4>
     <p>input</p>
 <hr>
 	<label for="string">Masukkan String:</label>
