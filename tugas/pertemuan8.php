@@ -98,7 +98,7 @@ if(isset($_POST['birthdate'])) {
     <p>Output:</p>
     <div class="alert alert-info">
         <?php if(isset($age)) {
-            echo $age;
+            echo "Usia Kamu adalah ".$age." Tahun";
         }?>
     </div>
 </div>
