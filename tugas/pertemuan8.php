@@ -82,7 +82,6 @@ if(isset($_POST['birthdate'])) {
     $birthdate = $_POST['birthdate'];
     $now = date('Y-m-d');
     $age = date_diff(date_create($birthdate), date_create($now))->y;
-    echo "<p>Your age is: " . $age . "</p>";
 }
 ?>
 <div class="card p-4" id="latihandate">
@@ -91,13 +90,15 @@ if(isset($_POST['birthdate'])) {
     <hr>
     <form method="post">
         <div class="mb-3">
-            <label for="birthdate" class="form-label">Birthdate:</label>
+            <label for="birthdate" class="form-label">Tanggal Lahir:</label>
             <input type="date" class="form-control" id="birthdate" name="birthdate" required>
         </div>
-        <button type="submit" class="btn btn-primary">Calculate</button>
+        <button type="submit" class="btn btn-primary">Hitung</button>
     </form>
-    <p>Output string:</p>
+    <p>Output:</p>
     <div class="alert alert-info">
-
+        <?php if(isset($age)) {
+            echo $age;
+        }?>
     </div>
 </div>
