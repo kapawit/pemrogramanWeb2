@@ -54,7 +54,7 @@
 		}
 	</script>
 
-<div class="card p-4">
+<div class="card p-4" id="latihanString">
     <h4>latihan Fungsi Manipulasi String</h4>
     <p>input</p>
 <hr>
@@ -74,5 +74,30 @@
 	<p>Output string:</p>
     <div class="alert alert-info">
         <p id="manipulated-string"></p>
+    </div>
+</div>
+<hr>
+<?php
+if(isset($_POST['birthdate'])) {
+    $birthdate = $_POST['birthdate'];
+    $now = date('Y-m-d');
+    $age = date_diff(date_create($birthdate), date_create($now))->y;
+    echo "<p>Your age is: " . $age . "</p>";
+}
+?>
+<div class="card p-4" id="latihandate">
+    <h4>latihan Fungsi Date</h4>
+    <p>input</p>
+    <hr>
+    <form method="post">
+        <div class="mb-3">
+            <label for="birthdate" class="form-label">Birthdate:</label>
+            <input type="date" class="form-control" id="birthdate" name="birthdate" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Calculate</button>
+    </form>
+    <p>Output string:</p>
+    <div class="alert alert-info">
+
     </div>
 </div>
