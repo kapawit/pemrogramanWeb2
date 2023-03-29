@@ -59,16 +59,16 @@
     <p>input</p>
 <hr>
 	<label for="string">Masukkan String:</label>
-	<input type="text" id="string" class="form-control" name="string" onchange="event.preventDefault();updateString()">
+	<input type="text" id="string" class="form-control" name="string" onchange="updateString()">
 
 	<p>Pilih Fungsi String</p>
 	<div>
-		<label><input type="radio" class="form-check-input" name="function" value="strlen" onchange="event.preventDefault();updateString()"> String Length</label><br>
-		<label><input type="radio" class="form-check-input" name="function" value="strrev" onchange="event.preventDefault();updateString()"> Reverse String</label><br>
-		<label><input type="radio" class="form-check-input" name="function" value="strtolower" onchange="event.preventDefault();updateString()"> Lowercase</label><br>
-		<label><input type="radio" class="form-check-input" name="function" value="strtoupper" onchange="event.preventDefault();updateString()"> Uppercase</label><br>
-		<label><input type="radio" class="form-check-input" name="function" value="ucfirst" onchange="event.preventDefault();updateString()"> Uppercase First</label><br>
-		<label><input type="radio" class="form-check-input" name="function" value="ucwords" onchange="event.preventDefault();updateString()"> Uppercase Words</label>
+		<label><input type="radio" class="form-check-input" name="function" value="strlen" onchange="updateString()"> String Length</label><br>
+		<label><input type="radio" class="form-check-input" name="function" value="strrev" onchange="updateString()"> Reverse String</label><br>
+		<label><input type="radio" class="form-check-input" name="function" value="strtolower" onchange="updateString()"> Lowercase</label><br>
+		<label><input type="radio" class="form-check-input" name="function" value="strtoupper" onchange="updateString()"> Uppercase</label><br>
+		<label><input type="radio" class="form-check-input" name="function" value="ucfirst" onchange="updateString()"> Uppercase First</label><br>
+		<label><input type="radio" class="form-check-input" name="function" value="ucwords" onchange="updateString()"> Uppercase Words</label>
 	</div>
     <hr>
 	<p>Output string:</p>
