@@ -10,5 +10,5 @@ while ($row=mysqli_fetch_array($hasil)){
     &nbsp;<a href=\"delete_article.php?articleID=$row[0]\">Hapus</a></li><br>");
 }
 echo("</table>"); 
-echo "<br><a href=\"tugas/form_article.php\">Tambah</a>"; 
+echo "<br><a href=\"form_artikel.php\">Tambah</a>"; 
 ?>
