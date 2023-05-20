@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect("localhost","root","","db_latihan11"); if (!$con)
+$con = mysqli_connect("localhost","pemrograman","LASJD*ASDUOIYO qoyiwyioOIASHDO OIH","db_latihan11"); if (!$con)
 {
 die('Could not connect: ' . mysqli_connect_error());
 }

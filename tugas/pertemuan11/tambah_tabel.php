@@ -1,5 +1,5 @@
 <?php
-$koneksi=mysqli_connect("localhost","root","","db_latihan11");
+$koneksi=mysqli_connect("localhost","pemrograman","LASJD*ASDUOIYO qoyiwyioOIASHDO OIH","db_latihan11");
 //membuat tabel
 $sql = "CREATE TABLE nama_table (
     nim VARCHAR(9) PRIMARY KEY,

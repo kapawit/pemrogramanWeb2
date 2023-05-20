@@ -1,7 +1,7 @@
 <?php
 $servername1 = "localhost";
-$username1 = "root";
-$password1 = "";
+$username1 = "pemrograman";
+$password1 = "LASJD*ASDUOIYO qoyiwyioOIASHDO OIH";
 // Membuat perintah koneksi
 $conn1 = new mysqli($servername1, $username1, $password1);
 // Check connection 
