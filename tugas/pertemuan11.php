@@ -21,7 +21,7 @@
   </div>
 
   <div class="card p-4 mt-4">
-  <h4>MANIPULASI DATABASE UPDATE DAN DELETE</h4>
+  <h4>Latihan Soal</h4>
 <?php
     $dir = "tugas/pertemuan11_latihansoal";
     $files = scandir($dir);
