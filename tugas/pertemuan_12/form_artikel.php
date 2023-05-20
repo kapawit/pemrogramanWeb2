@@ -1,7 +1,7 @@
 <?php include "koneksi.php";?>
 <h1>Form Berita</h1>
 <form name=article method=post action=article.php>
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<table width="100%"  cellspacing="0" cellpadding="0">
 <tr>
 <td width="18%">Judul</td>
 <td width="2%">:</td>

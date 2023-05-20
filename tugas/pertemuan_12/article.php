@@ -3,16 +3,18 @@
 $judul= $_POST['title'];
 $penulis = $_POST['author'];
 $lead = $_POST['abstraksi'];
-$isi = $_POST['content'];
+$content = $_POST['content'];
 
-$time=date("d/M/Y, H:i:s");
+$date = date("Y-m-d H:i:s");
+
 $lead = str_replace("\r\n","<br>",$lead);
 $content = str_replace("\r\n","<br>",$content);
-$query = "INSERT INTO articles (judul,penulis,lead,content,waktu)
-values('$judul','$penulis','$lead','$isi','$time')"; $result = mysqli_query($koneksi,$query);
+
+$query = "INSERT INTO articles (judul,penulis,lead,content,waktu) values('$judul','$penulis','$lead','$content','$date')"; 
+$result = mysqli_query($connection,$query);
 if($result){
     echo "<h3 align=center>Proses penambahan artikel berhasil</h3>"; 
-    echo "<A href=\"tampil_articles.php\">List</A>";
+    echo "<A href=\"tampil_article.php\">List</A>";
 }else{ 
     echo "<h2 align=center>Proses penambahan artikel tidak berhasil</h2>";
 }
