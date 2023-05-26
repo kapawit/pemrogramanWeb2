@@ -1,5 +1,5 @@
 <div class="card p-4">
-<h4>PERTEMUAN 12 - MANIPULASI DATABASE UPDATE DAN DELETE</h4>
+<h4>PERTEMUAN 13 - MANIPULASI DATABASE SEARCHING DAN SORTING</h4>
 <?php
     $dir = "tugas/pertemuan_13";
     $files = scandir($dir);
