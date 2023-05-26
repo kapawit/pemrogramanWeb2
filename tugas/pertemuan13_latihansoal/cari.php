@@ -1,6 +1,6 @@
 <?php 
 $koneksi=mysqli_connect("localhost","root","","db_latihan13");
-$cari=$_POST['nama'];
+$cari=$_POST['jurusan'];
 $hasil=mysqli_query($koneksi,"select * from tabel_mahasiswa where jurusan like '%$cari%' order by jurusan asc"); 
 
 echo
