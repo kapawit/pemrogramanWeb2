@@ -8,22 +8,35 @@ include("pertemuan_14/form.php");
 
   <div class="card p-4 mt-4">
   <h4>Latihan Soal</h4>
-<?php
-    $dir = "tugas/pertemuan14_latihansoal";
-    $files = scandir($dir);
-?>
-<?php foreach($files as $file) {
-    if(substr($file, -4) === ".php") {
-        if (isset($_GET['page'])) {
-          $page = filter_var($_GET['page'], FILTER_SANITIZE_STRING);
-        }
+<hr>
+<div class="row">
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-body table-responsive">
+      <h4>Tabel jenis Room</h4>
+      <?php
+        include("pertemuan14_latihansoal/getroom.php");
       ?>
-        <a class="list-group-item hvr-forward list-group-item-action" href="<?php echo 'tugas/pertemuan14_latihansoal/' . $file; ?>">
-          <span class="d-flex justify-content-between">
-            <?php echo $file; ?>
-            <i class="bi bi-arrow-right"></i>
-          </span>
-        </a>
-        <?php } ?>
-    <?php } ?>
+      </div>
+    </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body table-responsive">
+          <h4>Tabel Booking hotel</h4>
+          <?php
+            include("pertemuan14_latihansoal/getbooking.php");
+          ?>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="col-12 mt-4">
+  <h4>
+    Form Booking Room
+  </h4>
+<?php
+  include("pertemuan14_latihansoal/bookingform.php");
+?>
+</div>
   </div>
