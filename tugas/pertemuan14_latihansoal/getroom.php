@@ -1,9 +1,8 @@
 <?php
-function getAvailableRooms($check_in_date, $check_out_date) {
+function getAvailableRooms() {
   include "koneksi.php";
-  $sql = "CALL GetAvailableRooms(?, ?)";
+  $sql = "CALL GetAvailableRooms()";
   $stmt = $conn->prepare($sql);
-  $stmt->bind_param("ss", $check_in_date, $check_out_date);
   $stmt->execute();
   $result = $stmt->get_result();
   
@@ -24,5 +23,5 @@ function getAvailableRooms($check_in_date, $check_out_date) {
   $conn->close();
 }
 
-getAvailableRooms("2023-06-10", "2023-06-15");
+getAvailableRooms();
 ?>

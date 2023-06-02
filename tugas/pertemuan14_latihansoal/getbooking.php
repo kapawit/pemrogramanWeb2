@@ -2,7 +2,7 @@
 function getBookings() {
   include "koneksi.php";
   
-  $sql = "SELECT * FROM Bookings";
+  $sql = "SELECT * FROM bookings";
   $result = $conn->query($sql);
   
   if ($result->num_rows > 0) {
