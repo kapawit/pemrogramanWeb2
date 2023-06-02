@@ -70,6 +70,11 @@
     </div>
     <div class="col-md-9 pt-4 col-sm-12 vh-80">
       <div class="card mx-4 ms-lg-2 bg-light-subtle" id="my-card">
+        <div class="card-header">
+          <?php if(isset($_GET['page'])) {
+            echo "<h3>". substr($_GET['page'], 0, -4)."</h3>";
+          }?>
+        </div>
         <div class="card-body p-4">
         <ul class="nav nav-tabs bg-body" id="myTab" role="tablist">
           <li class="nav-item" role="presentation">
