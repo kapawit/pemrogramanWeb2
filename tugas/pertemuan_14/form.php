@@ -48,11 +48,11 @@ include 'koneksi.php';
 <h2>kirim barang</h2>
 <form action="tugas/pertemuan_14/aksi_form.php" method="post">
 <label >kode barang :</label>
-<select name="kode">
+<select class="form-control" name="kode">
 <?php
 $tabel1=mysqli_query($koneksi,"select * from tabel_2"); While($data1=mysqli_fetch_row($tabel1)) echo '<option value="'.$data1[0].'">'.$data1[0].'/'.$data1[1].'</option>';
 ?>
-</select><br><br>
-<label >jumlah:</label><input type="number" name="jumlah"><br><br>
-<input type="submit" value="kirim">
+</select>
+<label >jumlah:</label><input class="form-control" type="number" name="jumlah">
+<input class="btn btn-primary mt-3" type="submit" value="kirim">
 </form>
