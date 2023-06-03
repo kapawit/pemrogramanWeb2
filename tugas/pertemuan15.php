@@ -36,7 +36,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST" &&  isset($_POST["logout"])) {
         <h3>Login</h3>
       </div>
       <div class="card-body">
-      <?php echo isset($_SESSION["username"]);?>
         <form action='' method='post'>
           <label for="username">Username</label>
           <input class="form-control" type='text' name='username' placeholder="admin">
