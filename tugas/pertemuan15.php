@@ -1,3 +1,6 @@
+<div class="card p-4">
+<h4>PERTEMUAN 15 - SESSION</h4>
+
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["username"]) && isset($_POST["password"])) {
   $username = $_POST["username"];
@@ -52,3 +55,4 @@ if($_SERVER["REQUEST_METHOD"] == "POST" &&  isset($_POST["logout"])) {
 
 
 <?php }?>
+</div>
