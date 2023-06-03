@@ -85,7 +85,7 @@
           </li>
         </ul>
         <div class="tab-content mt-4" id="myTabContent">
-        <div style="min-height:100%;" class="tab-pane fade show overflow-y-scroll overflow-x-scroll active" id="preview-tab-pane" role="tabpanel" aria-labelledby="preview-tab" tabindex="0">
+        <div style="min-height:500px;" class="tab-pane fade show overflow-y-scroll overflow-x-scroll active" id="preview-tab-pane" role="tabpanel" aria-labelledby="preview-tab" tabindex="0">
           <div class="card">
           <div class="card-body">
             <?php 

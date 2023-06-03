@@ -1,4 +1,5 @@
 <?php
+session_start();
     $arr = array("Ford", "Toyota", "Esemka","Wuling");
     if (!isset($_SESSION['myArray'])) {
         $_SESSION['myArray'] = $arr;
