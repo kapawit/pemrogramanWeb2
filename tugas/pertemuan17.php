@@ -76,9 +76,9 @@ $connection->close();
   </div>
   <?php
   $servername = "127.0.0.1";
-  $username = "db_pertemuan17";
+  $username = "db_latihan17";
   $password = "(*AYSD*Y(BD*YB(SYD(B))))";
-  $database = "db_pertemuan17";
+  $database = "db_latihan17";
 
 $connection = new mysqli($servername, $username, $password, $database);
 if ($connection->connect_error) {
